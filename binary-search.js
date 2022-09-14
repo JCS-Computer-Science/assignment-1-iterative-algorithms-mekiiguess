@@ -1,10 +1,16 @@
-function binarySearch(array,searchTerm, start,end) {
-	if (start > end){
-	return false;} 
+function binarySearch(array, searchTerm, start, end) {
+		if (start >= end){
+		let mid = start + Math.floor((end - start)/ 2);
+		
+		if (array[mid]== searchTerm){
+			return mid
+		}if (array[mid] > searchTerm){
+			return binarySearch(array, searchTerm, start, mid + 1, end)
+		}if(array[mid] < searchTerm){
+			return binarySearch(array, searchTerm, start, mid - 1, end)
+		}
 
-	let mid = ((array.length) /2);
-
-	if 
+	}
 }
 
 module.exports = binarySearch;
